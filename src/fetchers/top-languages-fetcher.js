@@ -75,6 +75,8 @@ const fetchTopLanguages = async (
     throw new MissingParamError(["username"]);
   }
 
+  console.log(`Fetching top languages for ${username}...`);
+
   const res = await retryer(fetcher, { login: username });
 
   if (res.data.errors) {
