@@ -6,7 +6,6 @@ import { CustomError, logger } from "./utils.js";
 const PATs = Object.keys(process.env).filter((key) =>
   /PAT_\d*$/.exec(key),
 ).length;
-console.log(`Found ${PATs} PAT(s)`);
 const RETRIES = process.env.NODE_ENV === "test" ? 7 : PATs;
 
 /**
